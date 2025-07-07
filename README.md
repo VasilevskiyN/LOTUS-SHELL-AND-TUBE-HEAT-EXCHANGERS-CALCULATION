@@ -1,3 +1,8 @@
+<!-- Enable MathJax (for LaTeX formulas) -->
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 # **LOTUS Sector-Based Calculation Method for Shell-and-Tube Heat Exchangers**  
 
 ## **Abstract**  
@@ -44,9 +49,9 @@ The system supports multiple configurations:
 
 3. **Iterative Thermal Calculation**  
    Heat transfer in each calc sector is computed as:  
-   \[
-   Q_i = k_i \cdot F_i \cdot \Delta T_{\text{log},i}  
-   \]  
+$$ 
+Q_i = k_i \cdot F_i \cdot \Delta T_{\log,i} 
+$$
    - \(Q_i\): Thermal flux in sector  
    - \(k_i\): Local heat transfer coefficient  
    - \(F_i\): Heat transfer area  
