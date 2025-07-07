@@ -1,7 +1,3 @@
-<!-- Enable MathJax (for LaTeX formulas) -->
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
 
 # **LOTUS Sector-Based Calculation Method for Shell-and-Tube Heat Exchangers**  
 
@@ -48,30 +44,32 @@ The system supports multiple configurations:
    - **Calc Sectors**: Subdivided per tube passes (e.g., 4 calc sectors for 4-pass designs; Fig. 2).  
 
 3. **Iterative Thermal Calculation**  
-   Heat transfer in each calc sector is computed as:  
-$$ 
-Q_i = k_i \cdot F_i \cdot \Delta T_{\log,i} 
-$$
-   - \(Q_i\): Thermal flux in sector  
-   - \(k_i\): Local heat transfer coefficient  
-   - \(F_i\): Heat transfer area  
-   - \(\Delta T_{\text{log},i}\): Log mean temperature difference  
+   Heat transfer in each calc sector is computed as:
+     
+Q_i = k_i · F_i · ΔT_log,i
+
+Where:
+
+Q_i = Thermal flux in the sector [W]
+k_i = Local heat transfer coefficient [W/(m²·K)]
+F_i = Heat transfer surface area [m²]
+ΔT_log,i = Logarithmic mean temperature difference [K]
 
    **Assumptions**:  
    - Calc sectors are thermally isolated (no cross-sector influence).  
    - Outlet temperatures are averaged before progressing to the next shell sector (Fig. 3).  
 
-4. **Hydraulic Optimization**  
+5. **Hydraulic Optimization**  
    Shell-side velocity is calculated per sector:  
    \[
    v_{\text{shell}} = \frac{G_{\text{shell}}}{\rho \cdot S_{\text{eff}}}  
    \]  
    - Maximizes heat transfer coefficients while respecting constraints.  
 
-5. **Convergence Check**  
+6. **Convergence Check**  
    - Reiterates if \(k\), \(\Delta T\), or \(F\) deviations exceed **2%**.  
 
-6. **Visualization & Optimization**  
+7. **Visualization & Optimization**  
    - Graphs of temperature, velocity, and vibration profiles (Fig. 4) highlight:  
      - High-efficiency zones  
      - Phase transition onset  
