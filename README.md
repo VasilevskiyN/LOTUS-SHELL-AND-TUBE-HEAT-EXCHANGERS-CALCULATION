@@ -64,9 +64,9 @@ F_i = Heat transfer surface area [m²].
 
 5. **Hydraulic Optimization**  
    Shell-side velocity is calculated per sector:  
-   \[
-   v_{\text{shell}} = \frac{G_{\text{shell}}}{\rho \cdot S_{\text{eff}}}  
-   \]  
+
+v_shell = G_shell / (ρ · S_eff)
+
    - Maximizes heat transfer coefficients while respecting constraints.  
 
 6. **Convergence Check**  
