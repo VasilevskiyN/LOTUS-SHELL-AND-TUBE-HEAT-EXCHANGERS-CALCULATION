@@ -51,8 +51,11 @@ Q_i = k_i · F_i · ΔT_log,i
 Where:
 
 Q_i = Thermal flux in the sector [W].
+
 k_i = Local heat transfer coefficient [W/(m²·K)].
+
 F_i = Heat transfer surface area [m²].
+
 ΔT_log,i = Logarithmic mean temperature difference [K].
 
    **Assumptions**:  
